@@ -267,7 +267,7 @@ export const Bot = (botProps: BotProps & { class?: string }) => {
     setMessages((data) => {
       const updated = data.map((item, i) => {
         if (i === data.length - 1) {
-          return { ...item, message: item.message + text, messageId, sourceDocuments, fileAnnotations };
+          return { ...item, message: item.message + text+'Hello', messageId, sourceDocuments, fileAnnotations };
         }
         return item;
       });
