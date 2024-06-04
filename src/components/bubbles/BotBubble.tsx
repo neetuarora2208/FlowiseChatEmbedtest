@@ -147,6 +147,11 @@ export const BotBubble = (props: Props) => {
       botMessageEl.querySelectorAll('a').forEach((link) => {
         link.target = '_blank';
       });
+      const button1 = document.createElement('button');
+      button1.textContent = 'AddToCart';
+      button1.className =
+        'py-2 px-4 mb-2 justify-center font-semibold text-white focus:outline-none flex items-center disabled:opacity-50 disabled:cursor-not-allowed disabled:brightness-100 transition-all filter hover:brightness-90 active:brightness-75 file-annotation-button';
+      botMessageEl.appendChild(button1);
       if (props.fileAnnotations && props.fileAnnotations.length) {
         for (const annotations of props.fileAnnotations) {
           const button = document.createElement('button');
